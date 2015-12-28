@@ -85,13 +85,13 @@ h2{
 }
 
 button{
-  background-color:#66CCFF;
+  /*background-color:#66CCFF;
   border-radius:4px;
   width:102%;
   padding:10px 10px;
   border:0px;
   transition:0.5s background;
-  color:white;
+  color:white;*/
 }
 
 .spe{
@@ -103,11 +103,11 @@ button{
 }
 
 button:hover{
-  background-color:#3399FF;
+  //background-color:#3399FF;
 }
 
 button:active{
-  box-shadow:0px 0px 5px #297ACC inset;
+  //box-shadow:0px 0px 5px #297ACC inset;
 }
 
 

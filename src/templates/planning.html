@@ -1,8 +1,30 @@
 {% include 'header_planning.html' %}
 
 <h1>Planning</h1>
+
+<hr>
+<div class="row">
+<div class="col-lg-2 col-md-2 col-sm-0"></div>
+<div class="col-lg-8 col-md-8 col-sm-12">
+<!-- BOUTON POUR AJOUTER UNE MATIERE -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_ajout_matiere">
+  Ajouter une matière
+</button>
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_ajout_cours">
+  Ajouter un Cours / Devoir sur Place
+</button>
+
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_ajout_devoir">
+  Ajouter un Devoir à Rendre
+</button>
+</div>
+<div class="col-lg-2 col-md-2 col-sm-0"></div>
+</div>
+
+<hr>
+
 <div class="content">
-  <div>
+  
   <table>
     <tr>
       <th class="borderLeft"></th>
@@ -125,12 +147,54 @@
       <td class="f"> </td>
     </tr>
   </table>
+<hr>
+  
 
 
-  <button class="spe">Ajouter une matière</button>
-  <div class="env">
-    <div class="add">
-      <h2> Ajouter une matière </h2>
+
+  <div class="leftContent">
+    <h2 style=""> Ajout de Matières </h2>
+    <label>Matière :</label>
+      <select id="pop" style="width:100%" >
+        <option value="Mathématiques">Mathématiques</option>
+        <option value="Français">Français</option>
+        <option value="Anglais">Anglais</option>
+        <option value="SIN">SIN</option>
+        <option value="ET">ET</option>
+        <option value="EE">EE</option>
+        <option value="ITEC">ITEC</option>
+        <option value="Physique">Physique</option>
+        <option value="Cinéma">Cinéma</option>
+
+      </select>
+      <label>Couleur :</label>
+        <input style="width:102%" type="color">
+        <button class="addButton"> Ajouter </button>
+        <button class="red"> Supprimer </button>
+  </div> 
+
+  <!-- FIN CONTENT -->
+</div>
+
+
+
+
+
+<!-- LES POPUPS -->
+<!-- Modal FORMULAIRE AJOUT MATIERE -->
+<div class="modal fade" id="myModal_ajout_matiere" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <form action="#" methode="GET">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Ajouter une Matière</h4>
+      </div>
+      <div class="modal-body">
+        
+      
       <div class="form">
         <div class="form-group">
           <label for="matiere"> Matière :</label>
@@ -162,31 +226,149 @@
           <button>Envoyer</button>
         </div>
       </div>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+        <button type="button" class="btn btn-primary">Enregistrer</button>
+      </div>
+
+    </form>
     </div>
-  </div>
-  </div>
-
-
-  <div class="leftContent">
-    <h2 style=""> Ajout de Matières </h2>
-    <label>Matière :</labe>
-      <select id="pop" style="width:100%" type="text">
-        <option value="Mathématiques">Mathématiques</option>
-        <option value="Français">Français</option>
-        <option value="Anglais">Anglais</option>
-        <option value="SIN">SIN</option>
-        <option value="ET">ET</option>
-        <option value="EE">EE</option>
-        <option value="ITEC">ITEC</option>
-        <option value="Physique">Physique</option>
-        <option value="Cinéma">Cinéma</option>
-
-      </select>
-      <label>Couleur :</labe>
-        <input style="width:102%" type="color">
-        <button class="addButton"> Ajouter </button>
-        <button class="red"> Supprimer </button>
   </div>
 </div>
 
-<script> % static '/js/planning.js' % </script>
+
+<!-- Modal FORMULAIRE AJOUT COURS / DEVOIR SUR PLACE -->
+<div class="modal fade" id="myModal_ajout_cours" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <form action="#" methode="GET">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Ajouter un Cours / Devoir sur place</h4>
+      </div>
+      <div class="modal-body">
+        
+      
+      <fieldset>
+          
+          <dl class="dl-horizontal">
+            <dt><label>Choisir classe :</label></dt>
+            <dd><select class="form-control" name="classe" id="choixclasse" required="">
+              <option value="B1">B1</option><option value="B2">B2</option><option value="B3A">B3A</option><option value="B3B">B3B</option><option value="E1">E1</option><option value="E2">E2</option>            </select> </dd> <br>
+
+            <dt><label>Ajouter :</label></dt><dt>
+            </dt><dd>
+              <label class="radio-inline">
+                <input type="radio" name="radios" id="radios-0" value="Cours" checked="checked">
+                Un cours
+              </label>
+
+              <label class="radio-inline">
+                <input type="radio" name="radios" id="radios-1" value="Devoir sur table">
+                Un devoir sur place
+              </label> 
+            </dd> <br>
+
+            <dt><label>Salle : </label></dt>
+            <dd>
+              <select class="form-control" name="salle" required="">
+                <option value="A207" -="" estei="">A207 - estei</option><option value="A1" -="" ingesup="">A1 - ingesup</option><option value="G4" -="" ingesup="">G4 - ingesup</option><option value="G2" -="" ingesup="">G2 - ingesup</option>              </select> 
+            </dd> <br>
+
+            <dt><label>Choisir matière :</label></dt>
+            <dd>
+              <select class="form-control" name="matiere" required="">
+              <option value="ITIL">ITIL</option><option value="C#">C#</option><option value="Python">Python</option><option value="Cisco">Cisco</option><option value="Swift">Swift</option><option value="Java">Java</option><option value="Linux">Linux</option><option value="HTML">HTML</option><option value="PHP">PHP</option><option value="Management">Management</option><option value="Microsoft">Microsoft</option><option value="Infographie">Infographie</option>              </select> 
+            </dd> <br>
+
+            <dt><label>Date : </label> </dt>
+            <dd><input class="form-control hasDatepicker" type="text" id="datepicker" name="dated" required=""> </dd><br>
+            
+            <dt><label>Heure de début :</label> </dt>
+            <dd><input class="form-control" name="hdebut" type="time" min="08:45:00" max="19:15:00" value="08:45:00" required=""> </dd><br>
+
+            <dt><label>Heure de fin :</label> </dt>
+            <dd><input class="form-control" name="hfin" type="time" min="08:45:00" max="19:15:00" value="17:15:00" required=""> </dd><br>
+
+            <dt><label> Commentaire : </label> </dt>
+            <dd><textarea class="form-control" rows="3" name="commentaire"></textarea> </dd><br>
+          
+            <dd><button type="submit" class="btn btn-primary" style="margin-bottom:50px;">Valider</button> </dd>
+          </dl>
+        </fieldset>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+        <button type="button" class="btn btn-primary">Enregistrer</button>
+      </div>
+
+    </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal FORMULAIRE AJOUT DEVOIR A RENDRE -->
+<div class="modal fade" id="myModal_ajout_devoir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <form action="#" methode="GET">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Ajouter un Devoir à rendre</h4>
+      </div>
+      <div class="modal-body">
+        
+      
+      <fieldset>
+          
+          <dl class="dl-horizontal">
+            <dt> <label>Choisir classe :</label> </dt>
+            <dd>
+              <select class="form-control" name="classe">
+                <option>B1</option><option>B2</option><option>B3A</option><option>B3B</option><option>E1</option><option>E2</option>              </select>
+            </dd> <br>
+
+            <dt><label>Choisir matière :</label></dt>
+            <dd>
+              <select class="form-control" name="matiere">
+              <option value="ITIL">ITIL</option><option value="C#">C#</option><option value="Python">Python</option><option value="Cisco">Cisco</option><option value="Swift">Swift</option><option value="Java">Java</option><option value="Linux">Linux</option><option value="HTML">HTML</option><option value="PHP">PHP</option><option value="Management">Management</option><option value="Microsoft">Microsoft</option><option value="Infographie">Infographie</option>              </select> 
+            </dd> <br>
+
+            <dt><label>Nom du devoir: </label> </dt>
+            <dd><input class="form-control" type="text" name="nom" required=""> </dd><br>
+            
+            <dt><label>Date du rendu: </label> </dt>
+            <dd><input class="form-control hasDatepicker" type="text" id="datepicker2" name="dated" required=""> </dd><br>
+
+            <dt><label>H-max rendu :</label> </dt>
+            <dd><input class="form-control" name="heure" type="time" min="08:45:00" value="23:59:00" required=""> </dd><br>
+
+            <dt><label>Temps devoir :</label> </dt>
+            <dd><input class="form-control" name="tempsestime" type="time" value="00:10:00" required=""> </dd><br>
+
+            <dt><label> Commentaire : </label> </dt>
+            <dd><textarea class="form-control" rows="3" name="commentaire"></textarea> </dd><br>            
+            <dd><button type="submit" class="btn btn-primary">Valider</button> </dd>
+          </dl>
+        </fieldset>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+        <button type="button" class="btn btn-primary">Enregistrer</button>
+      </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
