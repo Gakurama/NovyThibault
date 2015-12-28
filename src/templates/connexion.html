@@ -1,13 +1,25 @@
 {% include 'header_planning.html' %}
 
 <body>
+	<div class="page_connexion">
+	<div class="col-lg-4 col-md-4 col-sm-12"></div>
+	<div class="col-lg-4 col-md-4 col-sm-12">
+		<div class="frm_connexion_title">
+			<h2 class="center">NOVY</h2>
+		</div>
+		<div class="frm_connexion_body">
     <form method="POST" action="/display/">
         {% csrf_token %}
 <!-- form as paragraph style -->
         {{form_connexion_render.as_p}}
 
-    <input class ='btn btn-primary' type='submit' value = "Sign Up"/>
+    <input class ='btn btn-block btn-primary' type='submit' value = "Se connecter"/>
 
 </form>
+</div>
+	</div>
+	<div class="col-lg-4 col-md-4 col-sm-12"></div>
+</div>
+
 
   </body>
