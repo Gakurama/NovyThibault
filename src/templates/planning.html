@@ -24,7 +24,7 @@
 <hr>
 
 <div class="content">
-  
+
   <table>
     <tr>
       <th class="borderLeft"></th>
@@ -148,10 +148,10 @@
     </tr>
   </table>
 <hr>
-  
 
 
 
+<!--
   <div class="leftContent">
     <h2 style=""> Ajout de Matières </h2>
     <label>Matière :</label>
@@ -171,7 +171,7 @@
         <input style="width:102%" type="color">
         <button class="addButton"> Ajouter </button>
         <button class="red"> Supprimer </button>
-  </div> 
+  </div>  -->
 
   <!-- FIN CONTENT -->
 </div>
@@ -193,8 +193,8 @@
         <h4 class="modal-title" id="myModalLabel">Ajouter une Matière</h4>
       </div>
       <div class="modal-body">
-        
-      
+
+
       <div class="form">
         <div class="form-group">
           <label for="matiere"> Matière :</label>
@@ -226,7 +226,7 @@
           <button>Envoyer</button>
         </div>
       </div>
-    
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
@@ -251,10 +251,10 @@
         <h4 class="modal-title" id="myModalLabel">Ajouter un Cours / Devoir sur place</h4>
       </div>
       <div class="modal-body">
-        
-      
+
+
       <fieldset>
-          
+
           <dl class="dl-horizontal">
             <dt><label>Choisir classe :</label></dt>
             <dd><select class="form-control" name="classe" id="choixclasse" required="">
@@ -270,24 +270,24 @@
               <label class="radio-inline">
                 <input type="radio" name="radios" id="radios-1" value="Devoir sur table">
                 Un devoir sur place
-              </label> 
+              </label>
             </dd> <br>
 
             <dt><label>Salle : </label></dt>
             <dd>
               <select class="form-control" name="salle" required="">
-                <option value="A207" -="" estei="">A207 - estei</option><option value="A1" -="" ingesup="">A1 - ingesup</option><option value="G4" -="" ingesup="">G4 - ingesup</option><option value="G2" -="" ingesup="">G2 - ingesup</option>              </select> 
+                <option value="A207" -="" estei="">A207 - estei</option><option value="A1" -="" ingesup="">A1 - ingesup</option><option value="G4" -="" ingesup="">G4 - ingesup</option><option value="G2" -="" ingesup="">G2 - ingesup</option>              </select>
             </dd> <br>
 
             <dt><label>Choisir matière :</label></dt>
             <dd>
               <select class="form-control" name="matiere" required="">
-              <option value="ITIL">ITIL</option><option value="C#">C#</option><option value="Python">Python</option><option value="Cisco">Cisco</option><option value="Swift">Swift</option><option value="Java">Java</option><option value="Linux">Linux</option><option value="HTML">HTML</option><option value="PHP">PHP</option><option value="Management">Management</option><option value="Microsoft">Microsoft</option><option value="Infographie">Infographie</option>              </select> 
+              <option value="ITIL">ITIL</option><option value="C#">C#</option><option value="Python">Python</option><option value="Cisco">Cisco</option><option value="Swift">Swift</option><option value="Java">Java</option><option value="Linux">Linux</option><option value="HTML">HTML</option><option value="PHP">PHP</option><option value="Management">Management</option><option value="Microsoft">Microsoft</option><option value="Infographie">Infographie</option>              </select>
             </dd> <br>
 
             <dt><label>Date : </label> </dt>
             <dd><input class="form-control hasDatepicker" type="text" id="datepicker" name="dated" required=""> </dd><br>
-            
+
             <dt><label>Heure de début :</label> </dt>
             <dd><input class="form-control" name="hdebut" type="time" min="08:45:00" max="19:15:00" value="08:45:00" required=""> </dd><br>
 
@@ -296,7 +296,7 @@
 
             <dt><label> Commentaire : </label> </dt>
             <dd><textarea class="form-control" rows="3" name="commentaire"></textarea> </dd><br>
-          
+
             <dd><button type="submit" class="btn btn-primary" style="margin-bottom:50px;">Valider</button> </dd>
           </dl>
         </fieldset>
@@ -324,10 +324,10 @@
         <h4 class="modal-title" id="myModalLabel">Ajouter un Devoir à rendre</h4>
       </div>
       <div class="modal-body">
-        
-      
+
+
       <fieldset>
-          
+
           <dl class="dl-horizontal">
             <dt> <label>Choisir classe :</label> </dt>
             <dd>
@@ -338,12 +338,12 @@
             <dt><label>Choisir matière :</label></dt>
             <dd>
               <select class="form-control" name="matiere">
-              <option value="ITIL">ITIL</option><option value="C#">C#</option><option value="Python">Python</option><option value="Cisco">Cisco</option><option value="Swift">Swift</option><option value="Java">Java</option><option value="Linux">Linux</option><option value="HTML">HTML</option><option value="PHP">PHP</option><option value="Management">Management</option><option value="Microsoft">Microsoft</option><option value="Infographie">Infographie</option>              </select> 
+              <option value="ITIL">ITIL</option><option value="C#">C#</option><option value="Python">Python</option><option value="Cisco">Cisco</option><option value="Swift">Swift</option><option value="Java">Java</option><option value="Linux">Linux</option><option value="HTML">HTML</option><option value="PHP">PHP</option><option value="Management">Management</option><option value="Microsoft">Microsoft</option><option value="Infographie">Infographie</option>              </select>
             </dd> <br>
 
             <dt><label>Nom du devoir: </label> </dt>
             <dd><input class="form-control" type="text" name="nom" required=""> </dd><br>
-            
+
             <dt><label>Date du rendu: </label> </dt>
             <dd><input class="form-control hasDatepicker" type="text" id="datepicker2" name="dated" required=""> </dd><br>
 
@@ -354,7 +354,7 @@
             <dd><input class="form-control" name="tempsestime" type="time" value="00:10:00" required=""> </dd><br>
 
             <dt><label> Commentaire : </label> </dt>
-            <dd><textarea class="form-control" rows="3" name="commentaire"></textarea> </dd><br>            
+            <dd><textarea class="form-control" rows="3" name="commentaire"></textarea> </dd><br>
             <dd><button type="submit" class="btn btn-primary">Valider</button> </dd>
           </dl>
         </fieldset>
@@ -370,5 +370,3 @@
     </div>
   </div>
 </div>
-
-
